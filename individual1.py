@@ -20,6 +20,7 @@ def get_person():
         "birthday": birthday
     }
 
+
 def display_people(everybody):
     """
     Вывести список всех людей
@@ -57,15 +58,18 @@ def display_people(everybody):
     else:
         print("Список людей пуст.")
 
+
 def birthday_select(persons, birthday_month):
+    """
+    Выбрать людей с днем рождения в определенном месяце
+    """
+
     result = []
     for pers in persons:
         if pers['birthday'].month == birthday_month:
             result.append(pers)
 
     return result
-
-
 
 
 def main():

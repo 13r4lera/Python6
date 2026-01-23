@@ -9,4 +9,4 @@ def format_all(template, *args, **kwargs):
 
 if __name__ == '__main__':
     print(format_all("User: {name}, ID: {}", 12, 34, name="Alice"))
-    print(format_all("User: {name}, ID: {}, his pet: {pet}", 1, 2, 3, 4, 5,  name="vasya", pet="petya"))
+    print(format_all("User: {name}, ID: {}, his pet: {pet}", 1, 2, 3,  name="vasya", pet="petya"))
