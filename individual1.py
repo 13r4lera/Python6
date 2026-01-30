@@ -11,7 +11,7 @@ def get_person():
 
     name = input("Фамилия и имя: ")
     phone = input("Номер телефона: ")
-    year, month, day = map(int, input("Дата рождения (гггг мм дд): ").split())
+    day, month, year = map(int, input("Дата рождения (дд.мм.гггг): ").split('.'))
     birthday = date(year, month, day)
 
     return {
@@ -49,7 +49,7 @@ def display_people(everybody):
                     idx,
                     pers.get('name', ''),
                     pers.get('phone', ''),
-                    str(pers.get('birthday', ''))
+                    f"{pers['birthday'].day:02d}.{pers['birthday'].month:02d}.{pers['birthday'].year}"
                 )
             )
 
@@ -100,7 +100,7 @@ def main():
         elif command == 'help':
             print("Список команд:\n")
             print("add - добавить человека;\n")
-            print("list - вывести список работников;\n")
+            print("list - вывести список людей;\n")
             print("select <месяц> - вывести имена людей, у которых день рождение в этом месяце;\n")
             print("help - отобразить справку;\n")
             print("exit - завершить работу с программой;\n")
